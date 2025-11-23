@@ -1,0 +1,268 @@
+{
+  "info": {
+    "name": "Shopping Cart API",
+    "_postman_id": "abcd1234-5678-90ef-1234-shopping-cart",
+    "description": "Postman collection for Fullstack Shopping Cart Assignment (ABCDE Ventures)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "User - Signup",{
+  "info": {
+    "name": "Shopping Cart API",
+    "_postman_id": "abcd1234-5678-90ef-1234-shopping-cart",
+    "description": "Postman collection for Fullstack Shopping Cart Assignment (ABCDE Ventures)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "User - Signup",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"123456\"\n}"
+        },
+        "url": { "raw": "http://localhost:8080/users", "host": ["localhost"], "port": "8080", "path": ["users"] }
+      }
+    },
+    {
+      "name": "User - Login",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"123456\"\n}"
+        },
+        "url": { "raw": "http://localhost:8080/users/login", "host": ["localhost"], "port": "8080", "path": ["users", "login"] }
+      },
+      "response": []
+    },
+    {
+      "name": "Items - Get All Items",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": { "raw": "http://localhost:8080/items", "host": ["localhost"], "port": "8080", "path": ["items"] }
+      }
+    },
+    {
+      "name": "Items - Create Item",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Laptop\",\n    \"price\": 59999\n}"
+        },
+        "url": { "raw": "http://localhost:8080/items", "host": ["localhost"], "port": "8080", "path": ["items"] }
+      }
+    },
+    {
+      "name": "Cart - Add Item to Cart",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"item_id\": 1\n}"
+        },
+        "url": { "raw": "http://localhost:8080/carts", "host": ["localhost"], "port": "8080", "path": ["carts"] }
+      }
+    },
+    {
+      "name": "Cart - Get My Cart",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": { "raw": "http://localhost:8080/carts", "host": ["localhost"], "port": "8080", "path": ["carts"] }
+      }
+    },
+    {
+      "name": "Cart - Update Quantity",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"qty\": 2\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/carts/{{cart_item_id}}",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["carts", "{{cart_item_id}}"]
+        }
+      }
+    },
+    {
+      "name": "Cart - Remove Item",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/carts/{{cart_item_id}}",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["carts", "{{cart_item_id}}"]
+        }
+      }
+    },
+    {
+      "name": "Orders - Create Order",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": { "raw": "http://localhost:8080/orders", "host": ["localhost"], "port": "8080", "path": ["orders"] }
+      }
+    },
+    {
+      "name": "Orders - List Orders",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": { "raw": "http://localhost:8080/orders", "host": ["localhost"], "port": "8080", "path": ["orders"] }
+      }
+    }
+  ]
+}
+
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"123456\"\n}"
+        },
+        "url": { "raw": "http://localhost:8080/users", "host": ["localhost"], "port": "8080", "path": ["users"] }
+      }
+    },
+    {
+      "name": "User - Login",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"123456\"\n}"
+        },
+        "url": { "raw": "http://localhost:8080/users/login", "host": ["localhost"], "port": "8080", "path": ["users", "login"] }
+      },
+      "response": []
+    },
+    {
+      "name": "Items - Get All Items",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": { "raw": "http://localhost:8080/items", "host": ["localhost"], "port": "8080", "path": ["items"] }
+      }
+    },
+    {
+      "name": "Items - Create Item",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Laptop\",\n    \"price\": 59999\n}"
+        },
+        "url": { "raw": "http://localhost:8080/items", "host": ["localhost"], "port": "8080", "path": ["items"] }
+      }
+    },
+    {
+      "name": "Cart - Add Item to Cart",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"item_id\": 1\n}"
+        },
+        "url": { "raw": "http://localhost:8080/carts", "host": ["localhost"], "port": "8080", "path": ["carts"] }
+      }
+    },
+    {
+      "name": "Cart - Get My Cart",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": { "raw": "http://localhost:8080/carts", "host": ["localhost"], "port": "8080", "path": ["carts"] }
+      }
+    },
+    {
+      "name": "Cart - Update Quantity",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"qty\": 2\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/carts/{{cart_item_id}}",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["carts", "{{cart_item_id}}"]
+        }
+      }
+    },
+    {
+      "name": "Cart - Remove Item",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/carts/{{cart_item_id}}",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["carts", "{{cart_item_id}}"]
+        }
+      }
+    },
+    {
+      "name": "Orders - Create Order",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": { "raw": "http://localhost:8080/orders", "host": ["localhost"], "port": "8080", "path": ["orders"] }
+      }
+    },
+    {
+      "name": "Orders - List Orders",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": { "raw": "http://localhost:8080/orders", "host": ["localhost"], "port": "8080", "path": ["orders"] }
+      }
+    }
+  ]
+}
